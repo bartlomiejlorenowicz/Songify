@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Songify Home Page</title>
+</head>
+
+<body>
+<h1>Song List</h1>
+<ul>
+    <li th:each="song : ${songsMap}">
+        <span th:text="'Song'  + ${song.key} + ': ' + ${song.value}"></span>
+    </li>
+</ul>
+</body>
+</html>
