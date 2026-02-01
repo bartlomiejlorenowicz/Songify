@@ -25,7 +25,7 @@ public class SongMapper {
         return new GetSongRequestDto(song);
     }
 
-    public static DeleteSongResponseDto mapFromSongToDeleteSongResponseDto(Integer id) {
+    public static DeleteSongResponseDto mapFromSongToDeleteSongResponseDto(Long id) {
         return new DeleteSongResponseDto("Song with id: " + id + " deleted successfully", HttpStatus.OK);
     }
 
@@ -34,7 +34,7 @@ public class SongMapper {
     }
 
     public static UpdateSongResponseDto mapFromSongToUpdateSongResponseDto(Song newSong) {
-        return new UpdateSongResponseDto(newSong.songName(), newSong.artist());
+        return new UpdateSongResponseDto(newSong.getName(), newSong.getArtist());
     }
 
     public static PartiallyUpdateSongResponseDto mapFromSongToPartiallyUpdateSongResponseDto(Song updatedSong) {
