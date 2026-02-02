@@ -1,5 +1,4 @@
 package com.songify.song.infastructure.controller.dto.response;
 
-
-public record SingleSongResponse(SongDto song) {
+public record SongDto(Long id, String name, String artist) {
 }
